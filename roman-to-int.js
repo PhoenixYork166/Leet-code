@@ -31,9 +31,9 @@
 // XC; X < C, output = C(100) - X(10) = 90
 // IV; I < V, output = V(5) - I(1) = 4
 
-// Need to create Hashmap
-var romanToInt = function(s) {
-    const map = { 
+// Need to create Hashmap to include all Scenaios
+var romanToInt = function(romanText) {
+    const hashMap = { 
         I: 1, 
         V: 5, 
         X: 10, 
@@ -47,17 +47,23 @@ var romanToInt = function(s) {
     // s = "IX" 
     // s.split('') 
     // output = ['I', 'X']
-    s.split('').forEach( (num, i) => {
-        if(map[num] < map[s[i+1]]) {
-            console.log('map[num]', map[num])
-            console.log('map[s[i+1]]', map[s[i+1]])
-            res -= map[num];
+    /* Looping through each romanText character */
+    romanText.split('').forEach( (num, index) => {
+        /* num = each character; index = elementIndex */
+        if(hashMap[num] < hashMap[romanText[index+1]]) {
+            console.log('hashMap[num]:', hashMap[num]);
+            console.log('hashMap[romanText[index+1]]:', hashMap[romanText[index+1]]);
+            res -= hashMap[num];
             console.log('res: ', res);
+            console.log(`\n`);
         } else {
-            console.log('map[num]', map[num])
-            res += map[num];
+            console.log('hashMap[num]:', hashMap[num])
+            res += hashMap[num];
             console.log('res: ', res);
+            console.log(`\n`);
         }
     });
     return res;
 };
+
+romanToInt('XCMIV');
