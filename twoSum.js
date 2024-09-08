@@ -36,8 +36,11 @@
 // complement_pair = 10 - 9 = 1
 // [0, 2]
 
-const nums = [3,2,4,1,2,3,3]
-target = 6
+// const nums = [2,7,11,15]
+// const target = 9;
+
+const nums = [3,2,4]
+const target = 6;
 
 var twoSum = function(nums, target) {
     var map = {}; // O(1) - Initializing a map is a constant time operations
