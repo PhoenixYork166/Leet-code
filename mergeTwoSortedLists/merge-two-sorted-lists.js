@@ -7,7 +7,9 @@ const linkedListToArray = require('./linkedListToArray');
 
 // The 2 arrays representing 2 sorted lists
 const list1 = [1,2,4];
+let linkedList1 = arrayToLinkedList(list1);
 const list2 = [1,3,4];
+let linkedList2 = arrayToLinkedList(list2);
 
 const mergeTwoLists = (list1, list2) => {
     // Create a new dummy ListNode having instantiated, acting as a non-data starting point for the new list
@@ -35,10 +37,8 @@ const mergeTwoLists = (list1, list2) => {
     // Return the start of the new linked list, skipping the dummy node
     const mergeListArray = linkedListToArray(dummy.next);
     console.log(`Merged LinkedList as Array:\n${mergeListArray}\n`);
+
     return dummy.next;
 }
-
-let linkedList1 = arrayToLinkedList(list1);
-let linkedList2 = arrayToLinkedList(list2);
 
 console.log(mergeTwoLists(linkedList1, linkedList2));
