@@ -6,6 +6,7 @@
 <h2>If your existing array has less than 1000 elements</h2>
 <h2>forEach loop (mutable) / .map() (immutable) / hashMap array[index] should theoretically do a better job</h2> 
 <br>
+<h2>In human language for easier understanding</h2>
 <h2>A Tree data structure allows data to be split by half, calculating either Left or Right side of a Tree is the shortest path for iterating through an array[]</h2>
 <img style="align: center; aspect-ratio: 16/9; max-width: 500px;" src="./images/tree-left-right-balanced.png">
 <br>
